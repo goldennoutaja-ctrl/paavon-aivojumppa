@@ -13,6 +13,8 @@
   --wrong: #b42318;
   --right: #027a48;
   --mode-active: #4f46e5;
+  --stats-btn: #2563eb;
+  --stats-btn-dark: #1d4ed8;
 }
 
 body {
@@ -344,10 +346,31 @@ body.locked #result-screen {
     padding: 22px;
   }
 }
-.start-actions {
+.start-actions,
+.result-actions {
   display: grid;
   gap: 16px;
+}
+
+.start-actions {
   margin-top: 22px;
+}
+
+.stats-btn {
+  width: 100%;
+  border: 0;
+  background: var(--stats-btn);
+  color: white;
+  padding: 18px 20px;
+  border-radius: 18px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.25);
+}
+
+.stats-btn:hover {
+  background: var(--stats-btn-dark);
 }
 
 .secondary-btn {
