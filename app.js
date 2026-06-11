@@ -49,6 +49,10 @@ const statsBtn = document.getElementById("stats-btn");
 const statsModal = document.getElementById("stats-modal");
 const closeStatsBtn = document.getElementById("close-stats-btn");
 
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
+
 function unlockSite() {
   const typedPassword = passwordInput.value.trim();
 
@@ -58,6 +62,7 @@ function unlockSite() {
     document.body.classList.remove("locked");
     lockOverlay.classList.add("hidden");
     passwordError.classList.add("hidden");
+    scrollToTop();
   } else {
     passwordError.classList.remove("hidden");
     passwordInput.value = "";
@@ -72,6 +77,7 @@ function initializeLockScreen() {
   if (alreadyUnlocked) {
     document.body.classList.remove("locked");
     lockOverlay.classList.add("hidden");
+    scrollToTop();
   } else {
     document.body.classList.add("locked");
     lockOverlay.classList.remove("hidden");
